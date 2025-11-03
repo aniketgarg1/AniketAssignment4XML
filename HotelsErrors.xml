@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Hotel>
+  <!--  DUPLICATE NAME on this hotel -->
+  <Hotel ID="H001" Rating="4.2">
+    <Name>Westin Tempe</Name>
+    <Name>Duplicate Name Should Fail</Name>
+    <Phone>480-968-8885</Phone>
+    <Phone>800-937-8461</Phone>
+    <Address NearestAirport="Phoenix Sky Harbor">
+      <Number>11</Number>
+      <Street>E 7th St</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+
+  <!--  MISSING REQUIRED ATTRIBUTE (ID) + 4) UNCLOSED ADDRESS -->
+  <Hotel Rating="3.5">
+    <Name>Courtyard by Marriott Tempe</Name>
+    <Phone>480-777-1234</Phone>
+    <Address NearestAirport="Phoenix Sky Harbor">
+      <Number>601</Number>
+      <Street>S Ash Ave</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+      <!-- Missing </Address> on purpose -->
+  </Hotel>
+
+  <!--  MISSING PHONE on this hotel -->
+  <Hotel ID="H003" Rating="3.8">
+    <Name>Hilton Garden Inn Tempe</Name>
+    <!-- No <Phone> element -->
+    <Address NearestAirport="Phoenix Sky Harbor">
+      <Number>1500</Number>
+      <Street>N Scottsdale Rd</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+</Hotel>
